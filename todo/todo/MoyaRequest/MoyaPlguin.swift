@@ -15,23 +15,25 @@ import Result
 //  对于status 不是 200 的
 final class MoyaResponsePlugin: PluginType
 {
-    func willSend(_ request: RequestType, target: TargetType) {
-        print("request...\(request.request?.url)");
-    }
-    func process(_ result: Result<Response, MoyaError>, target: TargetType) -> Result<Response, MoyaError> {
-        switch result {
-        case .success(let response):
-            let statuCode = response.statusCode
-            if statuCode == 200{
-                print("request success");
-            }else{
-                return result;
-            }
-        case .failure(let error):
-            print("request fail \(error)")
-            return result;
-        }
-    }
+//    func willSend(_ request: RequestType, target: TargetType) {
+//        print("request...\(request.request?.url)");
+//    }
+//    func process(_ result: Result<Response, MoyaError>, target: TargetType) -> Result<Response, MoyaError> {
+//        
+//        switch result {
+//        case .success(let response):
+//            response.statusCode = 300;
+//            let statuCode = response.statusCode
+//            if statuCode == 200{
+//                print("request success");
+//            }else{
+//                return result;
+//            }
+//        case .failure(let error):
+//            print("request fail \(error)")
+//            return result;
+//        }
+//    }
 }
 
 

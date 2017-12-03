@@ -53,6 +53,16 @@ class ViewController: BaseViewController {
                 UserDefaults.standard.setValue(self.tfPsw.stringValue , forKey: "password")
             }
             
+            
+            UserRequest.request(.login(email: self.tfEmail.stringValue, password: self.tfPsw.stringValue), success: { (result) in
+                
+            }, error: { (errorCode) in
+                
+            }, failure: { (failError) in
+                
+            })
+            
+            
         UserProvider.request(.login(email:self.tfEmail.stringValue , password: self.tfPsw.stringValue), completion: { (result) in
             switch result {
             case .success(let response):

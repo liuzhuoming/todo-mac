@@ -84,11 +84,13 @@ class TodoViewController: BaseViewController,NSTableViewDelegate,NSTableViewData
     // textfeil
     override func controlTextDidEndEditing(_ obj: Notification) {
         print(tfNewTodo.stringValue)
+        Hud.showInfo(info: tfNewTodo.stringValue)
         if tfNewTodo.stringValue.count>0 {
             todoManager?.addNewTodo(content: tfNewTodo.stringValue)
         }
         tfNewTodo.stringValue = ""
         tableView?.reloadData()
+        
     }
     
     

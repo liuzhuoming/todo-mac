@@ -13,7 +13,11 @@ class TodoWindowController: BaseNavigationWindow {
     override func windowDidLoad() {
         super.windowDidLoad()
     
-        
+        self.contentViewController?.view.addSubview(Hud.share);
+        Hud.share.snp.makeConstraints { (make) in
+            make.width.left.bottom.equalToSuperview();
+            make.height.equalTo(44);
+        }
     }
     
     

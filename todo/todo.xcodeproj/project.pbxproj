@@ -18,6 +18,11 @@
 		DC9A6B971FC561CC00682270 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC9A6B951FC561CC00682270 /* Main.storyboard */; };
 		DCA9B7581FC700D1004E94EE /* FlatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFB220F1FC6A9DA00C62D48 /* FlatButton.swift */; };
 		DCA9B7661FC80225004E94EE /* ViewControProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA9B7651FC80225004E94EE /* ViewControProtocol.swift */; };
+		DCB211471FD2908B0000F025 /* MoyaRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB211461FD2908B0000F025 /* MoyaRequest.swift */; };
+		DCB2114B1FD2F9420000F025 /* WindowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB2114A1FD2F9420000F025 /* WindowManager.swift */; };
+		DCB2114D1FD2FB830000F025 /* Hud.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB2114C1FD2FB830000F025 /* Hud.swift */; };
+		DCB2114F1FD308C30000F025 /* NSView_BackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB2114E1FD308C30000F025 /* NSView_BackgroundColor.swift */; };
+		DCB2115A1FD30E5B0000F025 /* DispatchTime_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB211591FD30E5B0000F025 /* DispatchTime_Extension.swift */; };
 		DCDDB8581FCD3EC300D96939 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDDB8571FCD3EC300D96939 /* BaseViewController.swift */; };
 		DCDDB85E1FCD4F2B00D96939 /* BaseNavigationWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDDB85D1FCD4F2B00D96939 /* BaseNavigationWindow.swift */; };
 		DCDDB8631FCD50F700D96939 /* LoginWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDDB8601FCD50F700D96939 /* LoginWindow.swift */; };
@@ -45,6 +50,11 @@
 		DC9A6B981FC561CC00682270 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC9A6B991FC561CC00682270 /* todo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = todo.entitlements; sourceTree = "<group>"; };
 		DCA9B7651FC80225004E94EE /* ViewControProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControProtocol.swift; sourceTree = "<group>"; };
+		DCB211461FD2908B0000F025 /* MoyaRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaRequest.swift; sourceTree = "<group>"; };
+		DCB2114A1FD2F9420000F025 /* WindowManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowManager.swift; sourceTree = "<group>"; };
+		DCB2114C1FD2FB830000F025 /* Hud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hud.swift; sourceTree = "<group>"; };
+		DCB2114E1FD308C30000F025 /* NSView_BackgroundColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSView_BackgroundColor.swift; sourceTree = "<group>"; };
+		DCB211591FD30E5B0000F025 /* DispatchTime_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchTime_Extension.swift; sourceTree = "<group>"; };
 		DCDDB8571FCD3EC300D96939 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		DCDDB85D1FCD4F2B00D96939 /* BaseNavigationWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationWindow.swift; sourceTree = "<group>"; };
 		DCDDB8601FCD50F700D96939 /* LoginWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginWindow.swift; sourceTree = "<group>"; };
@@ -75,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				DC37BAB51FD140B80045690C /* MoyaPlguin.swift */,
+				DCB211461FD2908B0000F025 /* MoyaRequest.swift */,
 			);
 			path = MoyaRequest;
 			sourceTree = "<group>";
@@ -104,6 +115,7 @@
 				DC37BAB41FD140960045690C /* MoyaRequest */,
 				DCDDB8661FCD511800D96939 /* Todo */,
 				DCDDB85F1FCD50F700D96939 /* Login */,
+				DCB211581FD30E1A0000F025 /* Extension */,
 				DCDDB85A1FCD4EF000D96939 /* BaseUI */,
 				DCFB220E1FC6A9C400C62D48 /* UIExtend */,
 				DCDDB86B1FCD898B00D96939 /* Model */,
@@ -115,12 +127,23 @@
 			path = todo;
 			sourceTree = "<group>";
 		};
+		DCB211581FD30E1A0000F025 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				DCB2114E1FD308C30000F025 /* NSView_BackgroundColor.swift */,
+				DCB211591FD30E5B0000F025 /* DispatchTime_Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		DCDDB85A1FCD4EF000D96939 /* BaseUI */ = {
 			isa = PBXGroup;
 			children = (
 				DCDDB8571FCD3EC300D96939 /* BaseViewController.swift */,
 				DCDDB85D1FCD4F2B00D96939 /* BaseNavigationWindow.swift */,
 				DCA9B7651FC80225004E94EE /* ViewControProtocol.swift */,
+				DCB2114A1FD2F9420000F025 /* WindowManager.swift */,
+				DCB2114C1FD2FB830000F025 /* Hud.swift */,
 			);
 			path = BaseUI;
 			sourceTree = "<group>";
@@ -307,9 +330,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC33248F1FCEABEF00D675D6 /* User.swift in Sources */,
+				DCB211471FD2908B0000F025 /* MoyaRequest.swift in Sources */,
 				DCDDB86D1FCD89F600D96939 /* Todo.swift in Sources */,
 				DCDDB86A1FCD51CD00D96939 /* TodoViewController.swift in Sources */,
 				DCDDB85E1FCD4F2B00D96939 /* BaseNavigationWindow.swift in Sources */,
+				DCB2114D1FD2FB830000F025 /* Hud.swift in Sources */,
+				DCB2115A1FD30E5B0000F025 /* DispatchTime_Extension.swift in Sources */,
+				DCB2114F1FD308C30000F025 /* NSView_BackgroundColor.swift in Sources */,
 				DCA9B7661FC80225004E94EE /* ViewControProtocol.swift in Sources */,
 				DCDDB8641FCD50F700D96939 /* RegisterViewController.swift in Sources */,
 				DCA9B7581FC700D1004E94EE /* FlatButton.swift in Sources */,
@@ -323,6 +350,7 @@
 				DC37BAB61FD140B80045690C /* MoyaPlguin.swift in Sources */,
 				DCDDB8631FCD50F700D96939 /* LoginWindow.swift in Sources */,
 				DC37BAB31FD11FAF0045690C /* MoyaForTodo.swift in Sources */,
+				DCB2114B1FD2F9420000F025 /* WindowManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
